@@ -18,13 +18,18 @@ class TestMetroRoute:
         # Открываем Главную страницу
         main_page.open_main_page()
 
+        # time.sleep(5)
+
         # Ждем загрузку схемы
         main_page.wait_for_open_main_page()
 
-        main_page.set_field_from('Красные Ворота')
-        # main_page.set_field_to('Фрунзенская')
+        main_page.select_from_station('Красные Ворота')
 
         time.sleep(5)
+
+        # main_page.select_to_station('Фрунзенская')
+
+        # time.sleep(5)
 
     @classmethod
     def teardown_class(cls):
